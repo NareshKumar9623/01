@@ -7,7 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wedding-----Planner</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">"
+
+    
 </head>
 
 <body>
@@ -23,81 +26,99 @@
         </nav>
         <div id="menu-bar"><i class="fas fa-bars"></i></div>
     </header>
-    <!---------------------------Home--------------------->
-    <section class="home" id="home">
-        <form action="#">
-            <div class="search-box">
-                <h1>Your Wedding,Your Way</h1>
-                <p>Find the best wedding vendors with thousands of trusted reviews</p>
-                <select type="text" class="search-field">
-            <option disabled selected>Select vendor type</option>
-            <option value="Wedding Venues">Wedding Venues</option>
-            <option value="Family makeup">Family makeup</option>
-            <option value="bridal makeup">Bridal Makeup</option>
-            <option value="Groom Wear">Groom Wear</option>
-            <option value="Wedding Decoration">Wedding decoration</option>
-        </select>
-                <select type="text" class="search-field">
-            <option disabled selected>City</option>
-            <option value="Anand">Anand</option>
-            <option value="Ahemdabad">Ahemdabad</option>
-            <option value="Mumbai">Mumbai</option>
-            <option value="Baroda">Baroda</option>
-            <option value="Goa">Goa</option>
-        </select>
-                <button class="btn">Search</button>
-            </div>
-        </form>
-    </section>
+   <!---------------------------Home--------------------->
+<section class="home" id="home">
+    <form action="#">
+        <div class="search-box">
+            <h1>Your Wedding, Your Way</h1>
+            <p>Find the best wedding vendors with thousands of trusted reviews</p>
+            
+            <!-- Removed the second search box and added a calendar -->
+            
+            <button class="btn">FOR BOOKING</button>
+        </div> 
+        <div class="social-icon">
+            <a href="https://api.whatsapp.com/send?phone=919940994802&text=">
+                <span><i class="fa fa-whatsapp" aria-hidden="true"></i></span>
+            </a>
+            <a href="tel:+919940994802">
+                <span><i class="fa fa-phone" aria-hidden="true"></i></span>
+            </a>
+            <a href="mailto:srivigneshmahal.nakshatira@gmail.com">
+                <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+            </a>
+            <a href="https://maps.app.goo.gl/viC2zUN7MYbvb6xD9">
+                <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+            </a>
+        </div>
+    </form>
+</section>
 
-    <!------------------------services-------------------->
-    <section class="service" id="service">
-        <div class="title">
-            <h1><span>S</span>ervice</h1>
-        </div>
-        <div class="services-row">
-            <div class="services-col">
-                <i class="fas fa-book-open"></i>
-                <h2>invitation</h2>
+<!------------------------services-------------------->
+<section class="service" id="service">
+    <div class="title">
+        <h1><span>S</span>ervice</h1>
+    </div>
+    <div class="services-row">
+        <a href="SriVigneshMahal.html" class="services-col invitation">
+            <div class="services-content">
+                <h2>𝐒𝐑𝐈 𝐕𝐈𝐆𝐍𝐄𝐒𝐇 𝐌𝐀𝐇𝐀𝐋</h2>
+                <i class="fas fa-home"></i>
                 <p>Lorem ipsum dolor sit amet, at mei dolore tritani repudiandae.</p>
             </div>
-            <div class="services-col">
-                <i class="fas fa-camera"></i>
-                <h2>Photography & Video</h2>
+        </a>
+        <a href="nakshtramahal.html" class="services-col photography">
+            <div class="services-content">
+                <h2>𝐍𝐀𝐊𝐒𝐇𝐓𝐑𝐀 𝐌𝐀𝐇𝐀𝐋</h2>
+                <i class="fas fa-home"></i>
                 <p>Lorem ipsum dolor sit amet, at mei dolore tritani repudiandae.</p>
             </div>
-            <div class="services-col">
-                <i class="fas fa-brush"></i>
-                <h2>Beauty & Makeup</h2>
+        </a>
+        <a href="events.html" class="services-col beauty">
+            <div class="services-content">
+                <h2>𝐒𝐑𝐈 𝐕𝐈𝐆𝐍𝐄𝐒𝐇 𝐄𝐕𝐄𝐍𝐓 𝐌𝐀𝐍𝐀𝐆𝐄𝐌𝐄𝐍𝐓</h2>
+                <i class="fas fa-book"></i>
                 <p>Lorem ipsum dolor sit amet, at mei dolore tritani repudiandae.</p>
             </div>
-            <div class="services-col">
-                <i class="fab fa-pagelines"></i>
-                <h2>Wedding flowers</h2>
-                <p>Lorem ipsum dolor sit amet, at mei dolore tritani repudiandae.</p>
-            </div>
-            <div class="services-col">
-                <i class="fas fa-birthday-cake"></i>
-                <h2>wedding cake</h2>
-                <p>Lorem ipsum dolor sit amet, at mei dolore tritani repudiandae.</p>
-            </div>
-            <div class="services-col">
-                <i class="fas fa-music"></i>
-                <h2>music band</h2>
-                <p>Lorem ipsum dolor sit amet, at mei dolore tritani repudiandae.</p>
-            </div>
-            <div class="services-col">
+        </a>
+        <a href="catering-service.html" class="services-col flowers">
+            <div class="services-content">
+                <h2>𝐒𝐑𝐈 𝐕𝐈𝐆𝐍𝐄𝐒𝐇 𝐂𝐀𝐓𝐄𝐑𝐈𝐍𝐆 𝐒𝐄𝐑𝐕𝐈𝐂𝐄</h2>
                 <i class="fas fa-utensils"></i>
-                <h2>Catering</h2>
                 <p>Lorem ipsum dolor sit amet, at mei dolore tritani repudiandae.</p>
             </div>
-            <div class="services-col">
+        </a>
+        <a href="subhiksha-rooms-hall.html" class="services-col cake">
+            <div class="services-content">
+                <h2>𝐒𝐔𝐁𝐇𝐈𝐊𝐒𝐇𝐀 𝐑𝐎𝐎𝐌𝐒 & 𝐇𝐀𝐋𝐋</h2>
+                <i class="fas fa-home"></i>
+                <p>Lorem ipsum dolor sit amet, at mei dolore tritani repudiandae.</p>
+            </div>
+        </a>
+        <a href="vignesh-oil-mills.html" class="services-col music">
+            <div class="services-content">
+                <h2>𝐕𝐈𝐆𝐍𝐄𝐒𝐇 𝐎𝐈𝐋 𝐌𝐈𝐋𝐋𝐒</h2>
+                <i class="fas fa-water"></i>
+                <p>Lorem ipsum dolor sit amet, at mei dolore tritani repudiandae.</p>
+            </div>
+        </a>
+        <a href="lighting.html" class="services-col catering">
+            <div class="services-content">
+                <h2>LIGHTING</h2>
+                <i class="fas fa-fire"></i>
+                <p>Lorem ipsum dolor sit amet, at mei dolore tritani repudiandae.</p>
+            </div>
+        </a>
+        <a href="dj.html" class="services-col jewellery">
+            <div class="services-content">
+                <h2>DJ</h2>
                 <i class="fas fa-ring"></i>
-                <h2>Jewellery</h2>
                 <p>Lorem ipsum dolor sit amet, at mei dolore tritani repudiandae.</p>
             </div>
-        </div>
-    </section>
+        </a>
+    </div>
+</section>
+
     <!-----------------------------vendor------------------->
     <section class="vendor" id="vendor">
         <div class="title">
@@ -287,6 +308,7 @@
         <div class="copyright ">
             <p>Copyright ©2022 All Rights Reserved | Knowledge Place KP</p>
         </div>
+        <script src="script.js"></script>
 </body>
 <script>
      let menu = document.querySelector('#menu-bar');
