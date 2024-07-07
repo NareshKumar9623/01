@@ -154,20 +154,51 @@ span {
 
 
 /*----------------------Home-------------*/
-
 .home {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
-    position: relative;
+    height: 100vh;
     overflow: hidden;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url("back-1.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+
+.home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the transparency here */
+    z-index: 0;
+}
+
 .search-box {
+    position: relative; /* Ensure search-box is above the overlay */
+    z-index: 1;
     margin: 20rem 0 0 0;
     color: var(--clr3);
     text-align: center;
@@ -198,7 +229,7 @@ span {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 2;
+    z-index: 1; /* Ensure social icons are above the overlay */
 }
 
 .home .social-icon a {
@@ -212,7 +243,7 @@ span {
     color: #ff7f50; /* Change to your desired hover color */
 }
 
-@media(max-width:767px) {
+@media (max-width: 767px) {
     .search-box h1 {
         font-size: 4rem;
     }
@@ -225,31 +256,9 @@ span {
     color: #fff;
     font-size: 3rem;
     text-align: center;
-    z-index: 2;
+    z-index: 1;
 }
 
-/* Animation Keyframes for Background Image Loop */
-@keyframes changeBackground {
-    0%, 100% { background-image: url("back-1.jpg"); }
-    25% { background-image: url("venue-1.jpg"); }
-    50% { background-image: url("venue-2.jpg"); }
-    75% { background-image: url("venue-3.jpg"); }
-}
-
-
-@keyframes changeBackgroundSlide {
-    0%, 100% { transform: translateX(0); }
-    25% { transform: translateX(-50%); }
-    50% { transform: translateX(0); }
-    75% { transform: translateX(50%); }
-}
-
-@keyframes changeBackgroundZoom {
-    0%, 100% { transform: scale(1); }
-    25% { transform: scale(1.2); }
-    50% { transform: scale(1); }
-    75% { transform: scale(0.8); }
-}
 
 
 /*-------------------services--------------*/
@@ -458,6 +467,8 @@ span {
 
 .venue .venue-list {
     display: flex;
+    height: 100%;
+    width: 100%;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
@@ -525,36 +536,183 @@ span {
 }
 
 
+
+/*--------------------Slideshow -------------------*/
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.slide {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+
+
+
 /*--------------------------e-invitation section-----------*/
 
-.invite .invitation-row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-}
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+        }
+        .title {
+            text-align: center;
+            padding: 2rem 0;
+        }
+        .title h1 {
+            font-size: 2.5rem;
+            color: #fa8072;
+        }
+        .title h1 span {
+            color: #ff6347;
+        }
+        .title p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+        .invite {
+            padding: 2rem;
+        }
+        .invite .invitation-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .invite .invitation-row .invitation-box {
+            flex: 1 1 25rem;
+            margin: 1rem;
+            position: relative;
+            border: .2rem dotted #fa8072;
+            padding: 2rem;
+            border-radius: .6rem;
+            overflow: hidden;
+            height: 30rem;
+            transition: .5s ease;
+        }
+        .invite .invitation-row .invitation-box:hover {
+            transform: translateY(-2rem);
+        }
+        .invite .invitation-row .invitation-box img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        .card-editor {
+            text-align: center;
+            padding: 2rem;
+            background-color: #fff;
+            border-top: .2rem solid #fa8072;
+        }
+        .card-editor h2 {
+            color: #fa8072;
+            margin-bottom: 1rem;
+        }
+        .input-field {
+            margin: 10px 0;
+        }
+        .input-field input {
+            padding: 10px;
+            width: 90%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .button {
+            background-color: #fa8072;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+        .button:hover {
+            background-color: #ff6347;
+        }
 
-.invite .invitation-row .invitation-box {
-    flex: 1 1 25rem;
-    margin: 1rem;
-    position: relative;
-    border: .2rem dotted var(--clr2);
-    padding: 2rem;
-    border-radius: .6rem;
-    overflow: hidden;
-    height: 30rem;
-}
 
-.invite .invitation-row .invitation-box:hover {
-    transition: .5s ease;
-    transform: translateY(-2rem);
-}
+        @import url('https://fonts.googleapis.com/css2?family=Brittany&display=swap');
 
-.invite .invitation-row .invitation-box img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f8ff;
+            padding: 20px;
+        }
+        .card-container {
+            position: relative;
+            width: 800px;
+            margin: 0 auto;
+        }
+        #card {
+            width: 100%;
+            height: auto;
+        }
+        .input-field {
+            margin: 10px 0;
+        }
+        .input-field input {
+            padding: 10px;
+            width: 90%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+        .button {
+            background-color: #fa8072;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 1.2rem;
+        }
+        .button:hover {
+            background-color: #ff6347;
+        }
+        .text-overlay {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            color: #A87526;
+            font-size: 2rem;
+            font-weight: bold;
+            font-family: 'Brittany', sans-serif;
+        }
+        #name1Text {
+            top: 320px;
+            font-size: xx-large;
+        }
+        #name2Text {
+            top: 400px;
+            font-size: xx-large;
+        }
+        #dateText {
+            top: 830px;
+            font-size: ;
+        }
+        
+
+
+
+
 
 
 /*---------------------------footer section-------------*/
